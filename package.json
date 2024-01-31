@@ -1,0 +1,11 @@
+{
+  "name": "s54_pointless_crafts",
+  "version": "1.0.0",
+  "description": "Welcome to the Pointless Crafts Website, where we celebrate the absurdity and humor in the world of 5-minute crafts. As a playful take on life hacks, this platform brings you the most pointless yet amusing crafts curated from the depths of internet hilarity. Our mission is simple: to entertain, tickle your funny bone, and embrace the joy of pointlessness.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
