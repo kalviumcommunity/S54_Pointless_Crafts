@@ -1,3 +1,4 @@
+
 # Pointless Crafts
 ---
 A list of the most pointless 5-minute crafts.
@@ -12,3 +13,4 @@ Since 5-minute crafts is a YouTube channel that posts life-hack-related content,
  - Notification Center: User can receive newly added hacks.
  - Favorite Option: User can add hacks they like to this list.
  - Hacks filtered on the basis of categories.
+
