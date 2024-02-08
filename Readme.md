@@ -38,4 +38,4 @@ Welcome to the Pointless Crafts Website, where we celebrate the absurdity and hu
 
 Feel free to explore the world of pointless crafts and join us in celebrating the joy of creativity, even if it leads to a somewhat absurd and utterly pointless outcome!
 
-## Render Deployment Link - https://pointless-crafts.onrender.com/ping
+## Render Deployment Link - https://pointless-crafts.onrender.com
