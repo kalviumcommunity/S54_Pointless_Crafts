@@ -1,6 +1,4 @@
-// hackHandler.js
-
-// Import necessary modules
+// Importing necessary modules
 const Hacks = require("../models/dataModel");
 
 // Get all hacks
