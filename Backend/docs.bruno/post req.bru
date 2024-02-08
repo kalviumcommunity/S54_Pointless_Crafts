@@ -1,0 +1,20 @@
+meta {
+  name: post req
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/data
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Make a spork",
+    "category": "Kitchen",
+    "videoUrl": "https://www.youtube.com/clip/Ugkxn9KHShj6aNhZRA-Ka9oaEBR0dSOJC8IH",
+    "timeDuration": "13 seconds"
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Update
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/api/data/65c49e387278d745d0d8efbe
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Are you too Lazy to work?",
+    "category": "Funny",
+    "videoUrl": "https://youtube.com/clip/UgkxcqcSZ39Wb7Jir5-r1n8G2wf8_ES7o9yo?feature=…",
+    "timeDuration": "23 seconds"
+  }
+}
