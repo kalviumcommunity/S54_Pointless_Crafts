@@ -1,16 +1,26 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./Home";
-import { CategoriesPage } from "./Components/CategoriesPage";
+import { BrowserRouter } from "react-router-dom";
 import { NavBar } from "./Components/NavBar";
 import { Footer } from "./Components/Footer";
 import { AppRoutes } from "./Routes";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    // logic for handling login
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    // logic for handling logout
+    setIsLoggedIn(false);
+  };
+
   return (
     <BrowserRouter>
-      <NavBar />
-      <AppRoutes />
+      <NavBar isLoggedIn={isLoggedIn} handleLogin={handleLogin} handleLogout={handleLogout} />
+      <AppRoutes isLoggedIn={isLoggedIn} handleLogin={handleLogin} handleLogout={handleLogout} />
       <Footer />
     </BrowserRouter>
   );
