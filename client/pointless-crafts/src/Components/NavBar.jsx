@@ -3,9 +3,9 @@ import DarkLogoImg from "../assets/light-logo.png";
 import LightLogoImg from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
-export const NavBar = () => {
-  const [theme, setTheme] = useState("light"); // default theme is light
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+export const NavBar = ({ isLoggedIn, handleLogin, handleLogout }) => {
+  const [theme, setTheme] = useState("light"); 
+  //  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
 
   const toggleIcon = () => {
@@ -14,15 +14,15 @@ export const NavBar = () => {
     setTheme(newTheme);
   };
 
-  const handleLogin = () => {
-    // Logic for handling login
-    setIsLoggedIn(true);
-  };
+    // const handleLogin = () => {
+    //   // Logic for handling login
+    //   setIsLoggedIn(true);
+    // };
 
-  const handleLogout = () => {
-    // Logic for handling logout
-    setIsLoggedIn(false);
-  };
+    // const handleLogout = () => {
+    //   // Logic for handling logout
+    //   setIsLoggedIn(false);
+    // };
 
   return (
     <>
