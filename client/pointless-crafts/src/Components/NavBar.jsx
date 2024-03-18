@@ -4,8 +4,7 @@ import LightLogoImg from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 export const NavBar = ({ isLoggedIn, handleLogin, handleLogout }) => {
-  const [theme, setTheme] = useState("light"); 
-  //  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [theme, setTheme] = useState("light");
   const [currentPage, setCurrentPage] = useState("home");
 
   const toggleIcon = () => {
@@ -13,16 +12,6 @@ export const NavBar = ({ isLoggedIn, handleLogin, handleLogout }) => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
-
-    // const handleLogin = () => {
-    //   // Logic for handling login
-    //   setIsLoggedIn(true);
-    // };
-
-    // const handleLogout = () => {
-    //   // Logic for handling logout
-    //   setIsLoggedIn(false);
-    // };
 
   return (
     <>
@@ -42,7 +31,7 @@ export const NavBar = ({ isLoggedIn, handleLogin, handleLogout }) => {
         <div className="navbar-center">
           <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
             <li>
-            <Link to="/">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/categories">Categories</Link>
@@ -85,33 +74,38 @@ export const NavBar = ({ isLoggedIn, handleLogin, handleLogout }) => {
           {/* Conditional rendering for profile icon and dropdown or login/signup button */}
           <div>
             {isLoggedIn ? (
-              <div className="dropdown dropdown-end">
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost btn-circle avatar"
-                >
-                  <div className="w-10 rounded-full">
-                    <img
-                      alt="Profile"
-                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                    />
+              <div className="flex">
+                <Link to="/post-hacks">
+                  <button class="btn btn-primary">Add Hack</button>
+                </Link>
+                <div className="dropdown dropdown-end">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="btn btn-ghost btn-circle avatar"
+                  >
+                    <div className="w-10 rounded-full">
+                      <img
+                        alt="Profile"
+                        src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                      />
+                    </div>
                   </div>
+                  <ul
+                    tabIndex={0}
+                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  >
+                    <li>
+                      <a className="justify-between">Profile</a>
+                    </li>
+                    <li>
+                      <a>Settings</a>
+                    </li>
+                    <li>
+                      <a onClick={handleLogout}>Logout</a>
+                    </li>
+                  </ul>
                 </div>
-                <ul
-                  tabIndex={0}
-                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-                >
-                  <li>
-                    <a className="justify-between">Profile</a>
-                  </li>
-                  <li>
-                    <a>Settings</a>
-                  </li>
-                  <li>
-                    <a onClick={handleLogout}>Logout</a>
-                  </li>
-                </ul>
               </div>
             ) : (
               <button onClick={handleLogin}>Login/Signup</button>
