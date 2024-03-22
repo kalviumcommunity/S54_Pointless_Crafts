@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllUsers, createUser, updateUser, getSingleUser, deleteUser } = require('../handlers/userhandler');
+const { getAllUsers, createUser, updateUser, getSingleUser, deleteUser, patchUser } = require('../handlers/userhandler');
 
 // Create an instance of router
 const userRoute = express.Router();
@@ -18,5 +18,7 @@ userRoute.get("/:id", getSingleUser);
 
 // Delete User
 userRoute.delete("/:id", deleteUser);
+
+userRoute.patch("/:id", patchUser);
 
 module.exports = userRoute;

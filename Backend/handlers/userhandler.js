@@ -67,5 +67,30 @@ const deleteUser = async (req, res) => {
     }
 };
 
+const patchUser = async (req, res) => {
+    try {
+        const userId = req.params.id;
+        const updates = req.body;
+
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Apply partial updates to the user object
+        for (const key in updates) {
+            if (updates.hasOwnProperty(key)) {
+                user[key] = updates[key];
+            }
+        }
+
+        const patchedUser = await user.save();
+        res.status(200).json({ message: "User patched", data: patchedUser });
+    } catch (error) {
+        console.error("Error patching user:", error);
+        res.status(500).json({ message: "Error patching user" });
+    }
+};
+
 // Export handler functions
-module.exports = { getAllUsers, createUser, updateUser, getSingleUser, deleteUser };
+module.exports = { getAllUsers, createUser, updateUser, getSingleUser, deleteUser, patchUser };
