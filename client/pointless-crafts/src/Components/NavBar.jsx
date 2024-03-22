@@ -76,7 +76,7 @@ export const NavBar = ({ isLoggedIn, handleLogin, handleLogout }) => {
             {isLoggedIn ? (
               <div className="flex">
                 <Link to="/post-hacks">
-                  <button class="btn btn-primary">Add Hack</button>
+                  <button className="btn btn-primary">Add Hack</button>
                 </Link>
                 <div className="dropdown dropdown-end">
                   <div

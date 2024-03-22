@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import { NavBar } from "./Components/NavBar";
 import { Footer } from "./Components/Footer";
 import { AppRoutes } from "./Routes";
-import { AddEntityForm } from "./Components/AddEntityForm";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -30,7 +29,6 @@ function App() {
         handleLogin={handleLogin}
         handleLogout={handleLogout}
       />
-      {/* <AddEntityForm /> */}
       <Footer />
     </BrowserRouter>
   );
