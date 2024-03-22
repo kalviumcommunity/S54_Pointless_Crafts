@@ -4,20 +4,20 @@ const { getAllHacks, createHack, updateHack, getSingleHacks, deleteHack, patchHa
 //create a instance of router
 const hackRoute = express.Router()
 
-/**Get all Contacts */
+/**Get all hacks */
 
 hackRoute.get("/", getAllHacks)
 
-/**Create Contact */
+/**Create hack */
 hackRoute.post("/", createHack)
 
-/**Update Contact */
+/**Update hack */
 hackRoute.put("/:id",updateHack )
 
-/**Get Single Contact */
+/**Get Single hack */
 hackRoute.get("/:id",getSingleHacks )
 
-/**Delete Contact */
+/**Delete hack */
 hackRoute.delete("/:id",deleteHack )
 
 hackRoute.patch("/:id", patchHack)
