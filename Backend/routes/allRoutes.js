@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllHacks, createHack, updateHack, getSingleHacks, deleteHack } = require('../handlers/hackHandler');
+const { getAllHacks, createHack, updateHack, getSingleHacks, deleteHack, patchHack } = require('../handlers/hackHandler');
 
 //create a instance of router
 const hackRoute = express.Router()
@@ -19,5 +19,7 @@ hackRoute.get("/:id",getSingleHacks )
 
 /**Delete Contact */
 hackRoute.delete("/:id",deleteHack )
+
+hackRoute.patch("/:id", patchHack)
 
 module.exports = hackRoute
