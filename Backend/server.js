@@ -3,6 +3,7 @@ const connectToDB = require('./config/dbConnection');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const hackRoute = require('./routes/allRoutes');
+const userRoute = require('./routes/userRoute');
 const { getAllHacks } = require('./handlers/hackHandler');
 const app = express();
 const port = process.env.PORT || 3000; 
@@ -39,6 +40,7 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use("/api/data", hackRoute);
+app.use("/api/users", userRoute);
 
 app.listen(port, () => {
   console.log(`🚀 Server running on PORT: ${port}`);
